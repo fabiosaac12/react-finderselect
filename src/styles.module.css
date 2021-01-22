@@ -40,7 +40,7 @@
     cursor: copy;
     overflow: hidden
 }
-.fsOption.even {
+.even {
     background: #e8e8e8
 }
 .fsOption:hover {
@@ -52,7 +52,7 @@
     margin: 0px 5px 0px 0px;
     font-size: 15px;
     color: #8b949e;
-    font-weight: 200;
+    font-weight: 400;
     pointer-events: none;
 }
 

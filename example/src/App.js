@@ -59,7 +59,7 @@ const Form = () => {
                 </div>
             </form>
 	<p className='openConsole'>Open the console</p>
-	<a href='https://github.com/fabiosaac12/react-finderselect' className='github'>GitHub</a>
+	<a href='https://github.com/fabiosaac12/react-finderselect' className='github'>Finder Select repository</a>
     	<img id='chargingImage' style={{display: charging ? '' : 'none'}} src={chargingImage} alt='chargingImage' />
         </div>
     );

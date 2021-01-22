@@ -111,7 +111,7 @@ const FinderSelect = ({ data, label, value, extraInfo, name, className, placehol
         const style = {
             display: e.display === false ? 'none' : ''
         }
-        const even = isEven(i) ? 'even' : ''
+        const even = isEven(i) ? styles.even : ''
 	return <li key={i} onMouseDown={handleLiOnMouseDown} style={style} className={`${name}LI fsOption ${styles.fsOption} ${even}`}>{e[label]}
             <span className='fsOptionValue' hidden>{e[value]}</span>
             <p className={`${styles.fsOptionExtraInfo} fsOptionExtraInfo`}>{e[extraInfo]}</p>

@@ -1,9 +1,9 @@
 # React Finder Select
-This is a small project whose objective is to supply an effective and easy to use solution for the common problems about the normal html select's, which are some boring and does not let you to search inside the options, so, if the select has too options, finding the desired option will be tedious.
+This is a small project whose objective is to supply an effective and easy to use solution for the common problems about the normal html select's, which are little boring and does not let you search inside the options, so if the select has too many options, finding the desired option will be tedious.
 
-The Finder Select let you to set an "onClick" function and an "onChange" function, so, yo will be able to use the Finder Select as you like. The main Finder Select characteristic is that it provides the user the way to make effective searches inside the select options only writing in the select.
+The Finder Select lets you set "onClick" and "onChange" functions so you will be able to use the Finder Select as you like. The main Finder Select characteristic is that it provides the user a way to make effective searches inside the select options only writing on the select.
 
-if you want to see how the Finder Select looks/works and compare it with a normal select, you can visit [this URL](https://fabiosaac12.github.io/react-finderselect/).
+If you want to see how the Finder Select looks/works and compare it with a normal select, you can visit [this URL](https://fabiosaac12.github.io/react-finderselect/). There we are taking the data asynchronously from an API and then sending them to the select. The example app code is on this repository; in the example folder.
 
 <br/>
 
