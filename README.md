@@ -3,7 +3,7 @@ This is a small project whose objective is to supply an effective and easy to us
 
 The Finder Select let you to set an "onClick" function and an "onChange" function, so, yo will be able to use the Finder Select as you like. The main Finder Select characteristic is that it provides the user the way to make effective searches inside the select options only writing in the select.
 
-if you want to see how the Finder Select looks/works and compare it with a normal select, you can visit [this URL](https://react-finderselect-example.herokuapp.com).
+if you want to see how the Finder Select looks/works and compare it with a normal select, you can visit [this URL](https://fabiosaac12.github.io/react-finderselect/).
 
 <br/>
 
@@ -73,7 +73,7 @@ const data = [
 />
 ``` 
 ### Example preview:
-[![examplePreview](examplePreview.png)](https://react-finderselect-example.herokuapp.com)
+[![examplePreview](https://github.com/fabiosaac12/react-finderselect/blob/master/examplePreview.png?raw=true)](https://fabiosaac12.github.io/react-finderselect/)
 
 
 ## License
