@@ -1,9 +1,92 @@
 /* add css module styles here (optional) */
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+/* to all the input's and select's, for the harmony of all them. can be modified or deleted */
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    border-radius: 7px;
+    border: 1px solid;
+    border-color: #00000050;
+    background: #fff;
+    font-size: 1rem
+}
+input {
+    height: 1.3rem;
+}
+select {
+    height: 2.175rem;
+}
+input:focus, select:focus {
+    border-color: #00000090;
+    box-shadow: 0 1px 1px #00000040 inset,
+        0 0 4px #00000040;
+    outline: 0 none;
+}
+/* to all the input's and select's, for the harmony of all them. can be modified or deleted */
+
+
+
+.fsContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.fsOptionsList {
+    width: inherit;
+    position: absolute;
+    background-color: #f2f2f2;
+    margin-top: 2.2rem;
+    z-index: 100;
+    padding: 0;
+    max-height: 300px;
+    overflow-y:auto;
+}
+
+@media only screen and (max-height: 650px) {
+    .fsOptionsList {
+	max-height: 150px
+    }
+}
+
+.fsOption {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 5px 5px 15px;
+    cursor: copy;
+    overflow: hidden
+}
+.fsOption.even {
+    background: #e8e8e8
+}
+.fsOption:hover {
+    background-color: #c2c2c2;
+}
+
+.fsOptionExtraInfo {
+    float: right;
+    margin: 0px 5px 0px 0px;
+    font-size: 15px;
+    color: #8b949e;
+    font-weight: 200;
+    pointer-events: none;
+}
+
+.fsLabelInput {
+    border-radius: 7px 0px 0px 7px
+}
+
+.fsExtendIcon {
+    width: 1.3rem;
+    border-radius: 0px 7px 7px 0px;
+    border: 1px solid;
+    border-color: #00000050;
+    background: #e8e8e8
+}
+
+.fsExtendIcon:active {
+    background: #c2c2c2
 }

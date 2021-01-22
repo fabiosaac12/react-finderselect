@@ -1,14 +1,67 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    font-style: Helvetica;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formContainer {
+    top: 20px;
+    width: 320px;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 20px;
+    border-color: #00000090;
+    box-shadow: 0 1px 1px #00000020 inset, 0 0 4px #00000020;
+    outline: 0 none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#inputContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form {
+    display: block;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+#chargingImage {
+    width: 74px;
+    height: 74px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -37px;
+    margin-left: -37px;
+    z-index: 1000;
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
 }

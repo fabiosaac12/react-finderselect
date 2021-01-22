@@ -1,10 +1,17 @@
 {
   "name": "react-finderselect",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "description": "A nice and cute select which will let the user to search inside the select options writing what he want to find",
   "author": "fabiosaac12",
   "license": "MIT",
-  "repository": "fabiosaac12/react-finderselect",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiosaac12/react-finderselect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fabiosaac12/react-finderselect/issues"
+  },
+  "homepage": "https://github.com/fabiosaac12/react-finderselect#readme",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -49,5 +56,15 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "finder",
+    "select",
+    "finderselect",
+    "searcherselect",
+    "reactselect",
+    "reactfinderselect",
+    "reactsearcherselect",
+    "searcher"
   ]
 }
