@@ -29,14 +29,14 @@ const FinderSelect = ({ data, label, value, extraInfo, name, className, placehol
             console.log(e)
         }
         // making the options visible
-        const ul = labelInput.parentNode.getElementsByClassName('fsOptionsList')[0]
+        const ul = labelInput.parentNode.parentNode.getElementsByClassName('fsOptionsList')[0]
         ul.style.display = ''
     }
 
     const handleInputOnBlur = async (e) => {
         const labelInput = e.target
         // making the options no visible
-        const ul = labelInput.parentNode.getElementsByClassName('fsOptionsList')[0]
+        const ul = labelInput.parentNode.parentNode.getElementsByClassName('fsOptionsList')[0]
         ul.style.display = 'none'
 
         const valueInput = labelInput.parentNode.getElementsByClassName('fsValueInput')[0]
@@ -58,19 +58,13 @@ const FinderSelect = ({ data, label, value, extraInfo, name, className, placehol
             valueInput.value = ''
             doSearch(e)
         }
-
-        try {
-            if (onChange) onChange(valueInput)
-        } catch (e) {
-            console.log(e)
-        }
     }
 
 
     const doSearch = (e) => {
         const labelInput = e.target
         
-        const whereSearch = labelInput.parentNode.getElementsByClassName('fsOption')
+        const whereSearch = labelInput.parentNode.parentNode.getElementsByClassName('fsOption')
         const whatSearch = removeAccents(labelInput.value.toLowerCase());
 
         // verifying if the input value matches with any option
@@ -90,16 +84,22 @@ const FinderSelect = ({ data, label, value, extraInfo, name, className, placehol
     const handleLiOnMouseDown = (e) => {
         const label = getInnerText(e.target)
         const value = e.target.getElementsByClassName('fsOptionValue')[0].innerHTML
-        const labelInput = e.target.parentNode.parentNode.getElementsByClassName('fsLabelInput')[0]
-        const valueInput = e.target.parentNode.parentNode.getElementsByClassName('fsValueInput')[0]
+        const labelInput = e.target.parentNode.parentNode.parentNode.getElementsByClassName('fsLabelInput')[0]
+        const valueInput = e.target.parentNode.parentNode.parentNode.getElementsByClassName('fsValueInput')[0]
         // setting the input label and value
         labelInput.value = label
         valueInput.value = value
+
+        try {
+            if (onChange) onChange(valueInput)
+        } catch (e) {
+            console.log(e)
+        }
     }
 
     const handleExtendIconMouseDown = (e) => {
         const labelInput = e.target.parentNode.getElementsByClassName('fsLabelInput')[0]
-        const ulVisible = e.target.parentNode.getElementsByClassName('fsOptionsList')[0].style.display !== 'none'
+        const ulVisible = e.target.parentNode.parentNode.getElementsByClassName('fsOptionsList')[0].style.display !== 'none'
         if (!ulVisible) {
             // if we dont avoid the default event, then the focus will go to the extendIcon because of the click event
             e.preventDefault()
@@ -119,12 +119,16 @@ const FinderSelect = ({ data, label, value, extraInfo, name, className, placehol
     })
 
     return <div className={`${name}Div fsContainer ${styles.fsContainer}`} >
-	<input className={`${name}Input fsLabelInput ${styles.fsLabelInput} ${className ? className : ''}`} placeholder={placeholder ? placeholder : ''} onChange={doSearch} onFocus={handleInputFocus} onBlur={handleInputOnBlur} />
-        <div onMouseDown={handleExtendIconMouseDown} className={`${styles.fsExtendIcon} fsExtendIcon`} />
-        <input name={name ? name : ''} className={`${name} fsValueInput`} type='hidden'></input>
-        <ul style={{ display: 'none' }} className={`${name}UL fsOptionsList ${styles.fsOptionsList}`}>
-            {options}
-        </ul>
+	<div className={`fsInputContainer ${styles.fsInputContainer}`}>
+	    <input className={`${name}LabelInput fsLabelInput ${styles.fsLabelInput} ${className ? className : ''}`} placeholder={placeholder ? placeholder : ''} onChange={doSearch} onFocus={handleInputFocus} onBlur={handleInputOnBlur} />
+	    <div onMouseDown={handleExtendIconMouseDown} className={`${styles.fsExtendIcon} fsExtendIcon`} />
+	    <input name={name ? name : ''} className={`${name} ${name}LabelInput fsValueInput`} type='hidden'></input>
+	</div>
+	<div className={styles.fsOptionsListContainer}>
+	    <ul style={{ display: 'none' }} className={`${name}UL fsOptionsList ${styles.fsOptionsList}`}>
+		{options}
+	    </ul>
+	</div>
     </div>
 }
 

@@ -75,6 +75,30 @@ const data = [
 ### Example preview:
 [![examplePreview](https://github.com/fabiosaac12/react-finderselect/blob/master/examplePreview.png?raw=true)](https://fabiosaac12.github.io/react-finderselect/)
 
+<br/>
+
+## Recommended CSS (modifiable):
+```css
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    border-radius: 7px;
+    border: 1px solid;
+    border-color: #00000050;
+    background: #fff;
+    font-size: 1rem
+}
+input:focus, select:focus {
+    border-color: #00000090;
+    box-shadow: 0 1px 1px #00000040 inset,
+        0 0 4px #00000040;
+    outline: 0 none;
+}
+```
+
+<br/>
 
 ## License
 MIT © [fabiosaac12](https://github.com/fabiosaac12)
