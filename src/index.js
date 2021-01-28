@@ -61,11 +61,11 @@ const FinderSelect = ({ data, label, value, extraInfo, name, className, placehol
     }
 
 
-    const doSearch = (e) => {
+    const doSearch = (e, reset=false) => {
         const labelInput = e.target
         
         const whereSearch = labelInput.parentNode.parentNode.getElementsByClassName('fsOption')
-        const whatSearch = removeAccents(labelInput.value.toLowerCase());
+        const whatSearch = reset ? '' : removeAccents(labelInput.value.toLowerCase());
 
         // verifying if the input value matches with any option
         for (let i = 0; i < whereSearch.length; i++) {

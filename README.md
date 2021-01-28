@@ -1,5 +1,5 @@
 # React Finder Select
-This is a small project whose objective is to supply an effective and easy to use solution for the common problems about the normal html select's, which are little boring and does not let you search inside the options, so if the select has too many options, finding the desired option will be tedious.
+This is a small project whose objective is to supply an effective and easy to use solution for the common problems about the normal html select's, which are a little boring and don't let you search inside the options, so if the select has too many options, finding the desired option will be tedious.
 
 The Finder Select lets you set "onClick" and "onChange" functions so you will be able to use the Finder Select as you like. The main Finder Select characteristic is that it provides the user a way to make effective searches inside the select options only writing on the select.
 
@@ -95,6 +95,9 @@ input:focus, select:focus {
     box-shadow: 0 1px 1px #00000040 inset,
         0 0 4px #00000040;
     outline: 0 none;
+}
+input:disabled, select:disabled {
+    background: #f1f1f1
 }
 ```
 
